@@ -1,0 +1,7 @@
+dependencies:
+  override:
+    - mvn -Pgenerate clean dependency:resolve-plugins dependency:go-offline
+
+test:
+  override:
+    - mvn -Pgenerate clean compile exec:java && mvn -Ptest compile exec:java
